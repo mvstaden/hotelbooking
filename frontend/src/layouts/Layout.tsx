@@ -1,4 +1,5 @@
 import React from "react";
+import Header from "../components/Header";
 
 interface Props {
   children: React.ReactNode;
@@ -6,7 +7,8 @@ interface Props {
 
 const Layout = ({ children }: Props) => {
   return (
-    <div>
+    <div className="flex flex-col min-h-screen">
+      <Header />
       <div>{children}</div>
     </div>
   );
