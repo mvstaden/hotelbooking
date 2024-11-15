@@ -29,7 +29,7 @@ router.post(
       if (!user) {
         return res.status(400).json({ message: "Invalid Credentials" });
       }
-      //Check if password matches
+      //Hashes password from request body and compares with password in DB
       const isMatch = await bcrypt.compare(password, user.password);
 
       if (!isMatch) {
@@ -56,6 +56,13 @@ router.post(
     }
   }
 );
+
+router.post("/logout", (req: Request, res: Response) => {
+  res.cookie("auth_token", "", {
+    expires: new Date(0),
+  });
+  res.send();
+});
 
 //Verify auth token
 router.get("/validate-token", verifyToken, (req: Request, res: Response) => {
