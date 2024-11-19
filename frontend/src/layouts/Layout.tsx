@@ -8,7 +8,8 @@ const Layout = () => {
     <div className=" flex flex-col min-h-screen">
       <Header />
       <Hero />
-      <div className="container mx-auto py-10 flex-1">
+      <div className="container mx-auto py-10 px-8 flex-1">
+        <h1 className="text-3xl">YOUTUBE: 5:46:45</h1>
         <Outlet />
       </div>
       <Footer />
