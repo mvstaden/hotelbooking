@@ -93,7 +93,11 @@ const DetailsSection = () => {
             Select a rating
           </option>
           {[1, 2, 3, 4, 5].map((num) => {
-            return <option value={num}>{num}</option>;
+            return (
+              <option key={num} value={num}>
+                {num}
+              </option>
+            );
           })}
         </select>
         {errors.starRating && (
