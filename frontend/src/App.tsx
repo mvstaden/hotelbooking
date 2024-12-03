@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./layouts/Layout";
-import { AddHotel, Register, SignIn } from "./pages";
+import { AddHotel, Register, SignIn, MyHotels } from "./pages";
 import { useAppContext } from "./context/AppContext";
 
 const App = () => {
@@ -23,6 +23,10 @@ const App = () => {
               {
                 path: "add-hotel",
                 element: <AddHotel />,
+              },
+              {
+                path: "my-hotels",
+                element: <MyHotels />,
               },
             ]
           : []),
