@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./layouts/Layout";
 import { AddHotel, Register, SignIn, MyHotels } from "./pages";
 import { useAppContext } from "./context/AppContext";
+import EditHotel from "./pages/EditHotel";
 
 const App = () => {
   const { isLoggedIn } = useAppContext();
@@ -27,6 +28,10 @@ const App = () => {
               {
                 path: "my-hotels",
                 element: <MyHotels />,
+              },
+              {
+                path: "edit-hotels/:hotelId",
+                element: <EditHotel />,
               },
             ]
           : []),
