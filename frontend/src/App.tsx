@@ -3,6 +3,7 @@ import Layout from "./layouts/Layout";
 import { AddHotel, Register, SignIn, MyHotels } from "./pages";
 import { useAppContext } from "./context/AppContext";
 import EditHotel from "./pages/EditHotel";
+import Search from "./pages/Search";
 
 const App = () => {
   const { isLoggedIn } = useAppContext();
@@ -18,6 +19,10 @@ const App = () => {
         {
           path: "sign-in",
           element: <SignIn />,
+        },
+        {
+          path: "search",
+          element: <Search />,
         },
         ...(isLoggedIn
           ? [
