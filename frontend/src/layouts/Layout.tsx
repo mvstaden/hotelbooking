@@ -16,6 +16,7 @@ const Layout = () => {
         <Outlet />
       </div>
       <Footer />
+      <h1>Testing Commit on Mac</h1>
     </div>
   );
 };
